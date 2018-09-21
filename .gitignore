@@ -6,7 +6,7 @@
 /out-tsc
 /src/assets
 package-lock.json
-/e2e
+
 # dependencies
 /node_modules
 
