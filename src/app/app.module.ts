@@ -6,14 +6,19 @@ import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
-import { TabelasComponent } from './home/tabelas/tabelas.component';
+import { MainTableComponent } from './main-table/main-table.component';
+import { UserComponent } from './user/user.component';
+import { InterestTableComponent } from './main-table/tables/interest-table/interest-table.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    TabelasComponent
+    MainTableComponent,
+    UserComponent,
+    InterestTableComponent
   ],
   imports: [
     BrowserModule,

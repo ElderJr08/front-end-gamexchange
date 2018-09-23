@@ -1,0 +1,25 @@
+{
+    "users":[
+        {
+            "id":1,
+            "nome":"Guido José"
+        },
+        {
+            "id":1,
+            "nome":"Guido Hugo"
+        },
+        {
+            "id":1,
+            "nome":"Guido Thiago"
+        },
+        {
+            "id":1,
+            "nome":"Guido Monumento"
+        },
+        {
+            "id":1,
+            "nome":"Tiago"
+        }
+        
+    ]
+}
