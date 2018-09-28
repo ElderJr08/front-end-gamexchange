@@ -1,0 +1,1 @@
+export const MY_API = 'http://gamexchange-env.mdfwveuzpg.us-west-2.elasticbeanstalk.com:8080';

@@ -12,7 +12,7 @@ import { InterestTableComponent } from './main-table/tables/interest-table/inter
 import { UsersComponent } from './users/users.component';
 import { ListaJogosComponent } from './lista-jogos/lista-jogos.component';
 import { MinhasTrocasComponent } from './minhas-trocas/minhas-trocas.component';
-
+import { UsersService } from './users/users.services';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { MinhasTrocasComponent } from './minhas-trocas/minhas-trocas.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
