@@ -1,31 +1,34 @@
-[{
-    "id": 1,
-    "name": "Naruto",
-    "description": "Melhor jogo do ano",
-    "platform": "Ps4",
-    "insertDate": null,
-    "tradeDate": null,
-    "isAvailable": null,
-    "users": null
-    },
-    {
-    "id": 3,
-    "name": "Tetris",
-    "description": "Classico velho",
-    "platform": "GameBoy",
-    "insertDate": null,
-    "tradeDate": null,
-    "isAvailable": null,
-    "users": null
-    },
-    {
-    "id": 5,
-    "name": "God of War",
-    "description": "Tem um pouquinho de aventura também",
-    "platform": "Ps4",
-    "insertDate": null,
-    "tradeDate": null,
-    "isAvailable": null,
-    "users": null
-    }
+{
+    "games":[
+        {
+            "id": 1,
+            "name": "Naruto",
+            "description": "Melhor jogo do ano",
+            "platform": "Ps4",
+            "insertDate": null,
+            "tradeDate": null,
+            "isAvailable": null,
+            "users": null
+        },
+        {
+            "id": 3,
+            "name": "Tetris",
+            "description": "Classico velho",
+            "platform": "GameBoy",
+            "insertDate": null,
+            "tradeDate": null,
+            "isAvailable": null,
+            "users": null
+        },
+        {
+            "id": 5,
+            "name": "God of War",
+            "description": "Tem um pouquinho de aventura também",
+            "platform": "Ps4",
+            "insertDate": null,
+            "tradeDate": null,
+            "isAvailable": null,
+            "users": null
+        }
     ]
+}

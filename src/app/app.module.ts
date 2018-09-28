@@ -13,6 +13,11 @@ import { UsersComponent } from './users/users.component';
 import { ListaJogosComponent } from './lista-jogos/lista-jogos.component';
 import { MinhasTrocasComponent } from './minhas-trocas/minhas-trocas.component';
 import { UsersService } from './users/users.services';
+import { GamesComponent } from './games/games.component';
+import { GameComponent } from './games/game/game.component';
+import { GameService } from './games/games.service';
+
+
 
 @NgModule({
   declarations: [
@@ -24,14 +29,16 @@ import { UsersService } from './users/users.services';
     InterestTableComponent,
     UsersComponent,
     ListaJogosComponent,
-    MinhasTrocasComponent
+    MinhasTrocasComponent,
+    GamesComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [UsersService],
+  providers: [UsersService, GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
