@@ -18,7 +18,7 @@ export class GameService {
 
     }
     getColumns(): string[]{//para as colunas
-      return ["name", "description", "platform","insertDate","tradeDate","isAvailable"];
+      return ["name", "description", "platform", "isAvailable", "insertDate", "tradeDate"];
     }
     
 }
