@@ -7,8 +7,9 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { MainTableComponent } from './main-table/main-table.component';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './users/user/user.component';
 import { InterestTableComponent } from './main-table/tables/interest-table/interest-table.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { InterestTableComponent } from './main-table/tables/interest-table/inter
     HomeComponent,
     MainTableComponent,
     UserComponent,
-    InterestTableComponent
+    InterestTableComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
