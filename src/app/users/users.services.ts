@@ -17,4 +17,7 @@ export class UsersService {
         map(response => response.json()));
 
     }
+    getColumns(): string[]{//para as colunas
+      return ["nome", "data", "jogoInteresse"];
+    }
 }

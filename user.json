@@ -4,31 +4,31 @@
             "id":1,
             "nome":"Guido José",
             "data":"10/05/2018",
-            "jogoInteresse":"A"
+            "jogoInteresse":"God of War"
         },
         {
             "id":1,
             "nome":"Guido Hugo",
             "data":"11/08/2018",
-            "jogoInteresse":"B"
+            "jogoInteresse":"Winning Eleven"
         },
         {
             "id":1,
             "nome":"Guido Thiago",
             "data":"15/09/2018",
-            "jogoInteresse":"C"
+            "jogoInteresse":"Naruto Ultimate Ninja Storm"
         },
         {
             "id":1,
             "nome":"Guido Monumento",
             "data":"11/02/2018",
-            "jogoInteresse":"D"
+            "jogoInteresse":"The Sims"
         },
         {
             "id":1,
             "nome":"Tiago",
             "data":"11/08/2018",
-            "jogoInteresse":"E"
+            "jogoInteresse":"Monopoly"
         }
         
     ]

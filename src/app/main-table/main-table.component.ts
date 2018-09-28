@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../users/users.services';
+import { User } from '../users/user/user.model';
+
 
 @Component({
   selector: 'gx-main-table',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-table.component.less']
 })
 export class MainTableComponent implements OnInit {
+  users: User[];
+  columns: string[];
 
-  constructor() { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit() {
+    this.userService.users()
+    .subscribe(users => this.users = users);
+
+    this.columns = this.userService.getColumns(); 
   }
 
 }

@@ -1,5 +1,22 @@
-<!-- Tabela -->
+<!-- Tabela 
 <div class="box-body table-responsive no-padding">
 <gx-interest-table></gx-interest-table>
 </div>
-<!-- /end Tabela -->
+nd Tabela -->
+<table class="table table-hover">
+    <!--<th *ngFor="let col of columns">
+        {{col}}
+    </th>-->
+    <tr>    
+      <th>Nickname</th>
+      <th>Data</th>
+      <th>Interesse</th>
+      <th>Lista</th>
+    </tr>
+    <tr class="" *ngFor="let user of users">
+        <td *ngFor="let col of columns">
+            {{user[col]}}
+        </td>
+        <td><button class="label label-primary">Ver lista</button></td>
+    </tr>
+  </table>
