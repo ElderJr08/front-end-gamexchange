@@ -10,6 +10,8 @@ import { MainTableComponent } from './main-table/main-table.component';
 import { UserComponent } from './users/user/user.component';
 import { InterestTableComponent } from './main-table/tables/interest-table/interest-table.component';
 import { UsersComponent } from './users/users.component';
+import { ListaJogosComponent } from './lista-jogos/lista-jogos.component';
+import { MinhasTrocasComponent } from './minhas-trocas/minhas-trocas.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { UsersComponent } from './users/users.component';
     MainTableComponent,
     UserComponent,
     InterestTableComponent,
-    UsersComponent
+    UsersComponent,
+    ListaJogosComponent,
+    MinhasTrocasComponent
   ],
   imports: [
     BrowserModule,
