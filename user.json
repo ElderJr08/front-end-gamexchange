@@ -2,23 +2,33 @@
     "users":[
         {
             "id":1,
-            "nome":"Guido José"
+            "nome":"Guido José",
+            "data":"10/05/2018",
+            "jogoInteresse":"A"
         },
         {
             "id":1,
-            "nome":"Guido Hugo"
+            "nome":"Guido Hugo",
+            "data":"11/08/2018",
+            "jogoInteresse":"B"
         },
         {
             "id":1,
-            "nome":"Guido Thiago"
+            "nome":"Guido Thiago",
+            "data":"15/09/2018",
+            "jogoInteresse":"C"
         },
         {
             "id":1,
-            "nome":"Guido Monumento"
+            "nome":"Guido Monumento",
+            "data":"11/02/2018",
+            "jogoInteresse":"D"
         },
         {
             "id":1,
-            "nome":"Tiago"
+            "nome":"Tiago",
+            "data":"11/08/2018",
+            "jogoInteresse":"E"
         }
         
     ]
