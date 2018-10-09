@@ -1,3 +1,5 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -33,12 +35,14 @@ import { GameService } from './games/games.service';
     GamesComponent,
     GameComponent
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+    
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [UsersService, GameService],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

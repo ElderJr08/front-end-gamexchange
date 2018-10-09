@@ -1,0 +1,17 @@
+{
+  "universal": {
+    "skipInstall": false,
+    "directory": ".",
+    "project": "gamexchange"
+  },
+  "serverless": {
+    "provider": "aws",
+    "skipInstall": false,
+    "directory": ".",
+    "project": "gamexchange",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  }
+}

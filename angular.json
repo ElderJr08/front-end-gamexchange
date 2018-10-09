@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gamexchange",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -26,7 +26,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [             
+            "styles": [
               "node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css",
               "node_modules/admin-lte/bower_components/Ionicons/css/ionicons.min.css",
@@ -45,8 +45,6 @@
               "node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
               "node_modules/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
               "node_modules/admin-lte/bower_components/chart.js/Chart.js"
-              
-
             ]
           },
           "configurations": {
@@ -96,9 +94,7 @@
             "styles": [
               "src/styles.less"
             ],
-            "scripts": [
-
-            ],
+            "scripts": [],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -115,6 +111,24 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "serverless": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.serverless.ts"
+                }
+              ]
+            }
           }
         }
       }
