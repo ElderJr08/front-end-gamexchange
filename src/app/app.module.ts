@@ -18,6 +18,16 @@ import { UsersService } from './users/users.services';
 import { GamesComponent } from './games/games.component';
 import { GameComponent } from './games/game/game.component';
 import { GameService } from './games/games.service';
+import { ActionComponent } from './category/action/action.component';
+import { AdventureComponent } from './category/adventure/adventure.component';
+import { ActionService } from './category/action/action.service';
+import { AdventureService } from './category/adventure/adventure.service';
+import { SportsComponent } from './category/sports/sports.component';
+import { RpgComponent } from './category/rpg/rpg.component';
+import { OthersComponent } from './category/others/others.component';
+import { RpgService } from './category/rpg/rpg.services';
+import { SportsService } from './category/sports/sports.service';
+
 
 
 
@@ -33,7 +43,12 @@ import { GameService } from './games/games.service';
     ListaJogosComponent,
     MinhasTrocasComponent,
     GamesComponent,
-    GameComponent
+    GameComponent,
+    ActionComponent,
+    AdventureComponent,
+    SportsComponent,
+    RpgComponent,
+    OthersComponent
   ],
   imports:[
  CommonModule,
@@ -43,6 +58,6 @@ NgtUniversalModule,
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [UsersService, GameService],
+  providers: [UsersService, GameService, ActionService, AdventureService,RpgService,SportsService],
 })
 export class AppModule { }

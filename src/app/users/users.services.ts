@@ -11,9 +11,9 @@ export class UsersService {
     constructor(private http: Http){}
 
     users(): Observable<User[]>{
-      console.log(this.http.get(`${ANOTHER_API}/users`).pipe(
+      console.log(this.http.get(`${MY_API}/users`).pipe(
         map(response => response.json())));
-      return this.http.get(`${ANOTHER_API}/users`).pipe(
+      return this.http.get(`${MY_API}/users`).pipe(
         map(response => response.json()));
 
     }

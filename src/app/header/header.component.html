@@ -12,17 +12,17 @@
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
           <li routerLinkActive="active"><a [routerLink]="['/minhas-trocas']">Minhas Trocas <span class="sr-only">(current)</span></a></li>
-          <li><a [routerLink]="['/lista-jogos']">Lista de Jogos</a></li>
+          <li><a [routerLink]="['/lista-jogos']">Meus jogos</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gênero <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Ação</a></li>
-              <li><a href="#">Aventura</a></li>
-              <li><a href="#">Esportes</a></li>
+              <li><a [routerLink]="['/action']">Ação</a></li>
+              <li><a [routerLink]="['/adventure']">Aventura</a></li>
+              <li><a [routerLink]="['/sports']">Esportes</a></li>
               <li class="divider"></li>
-              <li><a href="#">RPG</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Outros</a></li>
+              <li><a [routerLink]="['/rpg']">RPG</a></li>
+              <li a href="#"></li>
+              <li><a [routerLink]="['/others']">Outros</a></li>
             </ul>
           </li>
         </ul>

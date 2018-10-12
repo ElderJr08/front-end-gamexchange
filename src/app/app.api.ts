@@ -1,2 +1,2 @@
-export const MY_API = 'http://gamexchange-env.mdfwveuzpg.us-west-2.elasticbeanstalk.com:8080';
+export const MY_API = 'http://devgamexchange-env.3euhabra2u.sa-east-1.elasticbeanstalk.com';
 export const ANOTHER_API = 'http://localhost:3000'
