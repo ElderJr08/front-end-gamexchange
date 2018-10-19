@@ -9,7 +9,7 @@ import { Category } from '../category.model';
   styleUrls: ['./action.component.less']
 })
 export class ActionComponent implements OnInit {
-  actions: Category[];
+  actions: Category;
   columns: string[];
 
   constructor(private actionService: ActionService) { }

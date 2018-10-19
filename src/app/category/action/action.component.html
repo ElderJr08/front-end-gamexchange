@@ -31,7 +31,7 @@
                           <th>Plataforma</th>
                           <th>Disponível p/ Troca</th>
                       </tr>
-                      <tr class="" *ngFor="let game of actions.games">
+                      <tr class="" *ngFor="let game of actions?.games">
                         <td *ngFor="let col of columns">
                             {{game[col]}}
                         </td>
