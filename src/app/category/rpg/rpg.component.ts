@@ -9,7 +9,7 @@ import { RpgService } from './rpg.services';
 })
 export class RpgComponent implements OnInit {
 
-  rpgs: Category[];
+  rpgs: Category;
   columns: string[];
 
   constructor(private rpgService: RpgService) { }

@@ -9,7 +9,7 @@ import { AdventureService } from './adventure.service';
 })
 export class AdventureComponent implements OnInit {
 
-  adventures: Category[];
+  adventures: Category;
   columns: string[];
 
   constructor(private adventureService: AdventureService) { }

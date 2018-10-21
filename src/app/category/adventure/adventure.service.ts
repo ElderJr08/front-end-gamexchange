@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class AdventureService {
     constructor(private http: Http){}
 
-    action(): Observable<Category[]>{
+    action(): Observable<Category>{
       console.log(this.http.get(`${MY_API}/category/6`).pipe(
         map(response => response.json())));
       return this.http.get(`${MY_API}/category/6`).pipe(
