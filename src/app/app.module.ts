@@ -27,6 +27,10 @@ import { RpgComponent } from './category/rpg/rpg.component';
 import { OthersComponent } from './category/others/others.component';
 import { RpgService } from './category/rpg/rpg.services';
 import { SportsService } from './category/sports/sports.service';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './login/login.service';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 
 
@@ -48,7 +52,8 @@ import { SportsService } from './category/sports/sports.service';
     AdventureComponent,
     SportsComponent,
     RpgComponent,
-    OthersComponent
+    OthersComponent,
+    LoginComponent
   ],
   imports:[
  CommonModule,
@@ -56,8 +61,14 @@ NgtUniversalModule,
  
     
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
-  providers: [UsersService, GameService, ActionService, AdventureService,RpgService,SportsService],
+  providers: [UsersService, GameService, ActionService, AdventureService,RpgService,SportsService,LoginService],
 })
 export class AppModule { }
