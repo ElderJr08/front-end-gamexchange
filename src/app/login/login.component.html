@@ -6,7 +6,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Insira seu login e senha para começar!</p>
 
-    <form (ngSubmit)="Logar(UserName.value,Password.value)">
+    <form>
       <div class="form-group has-feedback">
         <input type="email" #UserName ngModel name="UserName" class="form-control" placeholder="Usuário">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -25,7 +25,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+          <button type="button" (click)="Logar(UserName.value,Password.value)" class="btn btn-primary btn-block btn-flat">Entrar</button>
         </div>
         <!-- /.col -->
       </div>

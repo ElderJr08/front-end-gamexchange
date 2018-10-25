@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'LoginService';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'gx-login',
@@ -8,8 +8,18 @@ import { LoginService } from 'LoginService';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() {}
-  ngOnInit() {
+  constructor(private login:LoginService) {
+    
   }
-  Logar(user,passord);
+  
+  ngOnInit() {
+    
+  }
+
+  Logar(user, pass){
+    console.log("AQUIIIIIII");
+    this.login.Logar(user, pass);
+  }
+
+  
 }
