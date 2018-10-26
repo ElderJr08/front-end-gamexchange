@@ -1,24 +1,46 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-
-import {Game} from "./game/game.model"
-import { MY_API, ANOTHER_API } from '../app.api';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { MY_API } from '../app.api';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class GameService {
-    constructor(private http: Http){}
+    constructor(private http: HttpClient){}
 
-    games(): Observable<Game[]>{
-      console.log(this.http.get(`${MY_API}/game`).pipe(
-        map(response => response.json())));
-      return this.http.get(`${MY_API}/game`).pipe(
-        map(response => response.json()));
+    games(){
+      let httpHeaders = new HttpHeaders()
+        .set('Content-Type', 'application/json')
+        .set('Cache-Control', 'no-cache')
+        .set('Authorization', localStorage['token']);
+      
+        let options = {
+          headers: httpHeaders
+        }
+
+      return this.http.get(`${MY_API}/user/games`,options);
 
     }
     getColumns(): string[]{//para as colunas
       return ["name", "description", "platform", "isAvailable", "insertDate", "tradeDate"];
+    }
+    
+    Cadastrar(titulo,categ,desc){
+      let httpHeaders = new HttpHeaders()
+        .set('Content-Type', 'application/json')
+        .set('Cache-Control', 'no-cache')
+        .set('Authorization', localStorage['token']);
+      
+        let options = {
+          headers: httpHeaders      
+        }
+       
+      return this.http.post(`${MY_API}/games`,{
+        name:titulo,
+        description:desc,
+        platform:"Ps4",
+        categoryId:4
+      }, options).subscribe(function(res){
+        console.log(res);
+      });
     }
     
 }

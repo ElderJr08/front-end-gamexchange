@@ -30,12 +30,12 @@
                               <div class="box-body">
                                 <div class="form-group">
                                   <label for="exampleInputEmail1">Título</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Titulo do jogo">
+                                  <input type="text" class="form-control" #TittleGame id="exampleInputEmail1" placeholder="Titulo do jogo">
                                 </div>
                                 <div class="form-group">
                                   <label for="ExampleCategoria">Categoria</label>
-                                  <select class="form-control" id="ExampleCategoria">
-                                      <option>Selecione...</option>
+                                  <select class="form-control" id="ExampleCategoria" #CategoryGame>
+                                      <option>Selecione</option>
                                       <option>Ação</option>
                                       <option>Aventura</option>
                                       <option>Esportes</option>
@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Descrição</label>
-                                    <textarea class="form-control" rows="3" placeholder="Digite aqui..." style="margin: 0px -16.5px 0px 0px; height: 131px; width: 519px;"></textarea>
+                                    <textarea class="form-control" #Description rows="3" placeholder="Digite aqui..." style="margin: 0px -16.5px 0px 0px; height: 131px; width: 519px;"></textarea>
                                   </div>
                                 <div class="form-group">
                                   <label for="exampleInputFile">Anexar foto</label>
@@ -64,7 +64,7 @@
                               <!-- /.box-body -->
                 
                               <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Salvar</button>
+                                <button type="button" (click)="Cadastrar(TittleGame.value,CategoryGame.value,Description.value);" class="btn btn-primary">Salvar</button>
                                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal" style="margin-right:5px">Cancelar</button>
                               </div>
                             </form>

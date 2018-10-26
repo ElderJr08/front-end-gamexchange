@@ -9,7 +9,7 @@ import {Game} from "../games/game/game.model"
 })
 export class ListaJogosComponent implements OnInit {
 
-  games: Game[];
+  games: any;
   columns: string[];
 
   constructor(private gameService: GameService) { }
@@ -19,6 +19,21 @@ export class ListaJogosComponent implements OnInit {
     .subscribe(games => this.games = games);
 
     this.columns = this.gameService.getColumns(); 
+  }
+  Cadastrar(titulo,categ,desc){
+    if(titulo === "" && categ === "Selecione" && desc === ""){
+      alert('Por favor, preencha os campos Título, Categoria e Descrição corretamente');
+    }else if(titulo === ""){
+      alert('Por favor, preencha os campos Título');
+    }else if(categ === "Selecione"){
+      alert('Por favor, preencha o campo Categoria corretamente');
+    }else if(desc === ""){
+      alert('Por favor, preencha o campo Descrição corretamente');
+    }else{
+      console.log(titulo,categ,desc);
+      this.gameService.Cadastrar(titulo,categ,desc);
+    }
+    
   }
 
 }

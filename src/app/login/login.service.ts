@@ -16,12 +16,17 @@ export class LoginService {
         .set('Cache-Control', 'no-cache')
         .set('Authorization', 'Basic ' + btoa(user+':'+pass));
 
+        localStorage.setItem('token', 'Basic ' + btoa(user+':'+pass));
+
         let options = {
             headers: httpHeaders
        }; 
 
       return this.http.post(`${MY_API}/login`, null, options).subscribe(function(res){
-          console.log(res);
+          if(res === null){
+              console.log('ok');
+              console.log(localStorage);
+          }
       })
     }
 

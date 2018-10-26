@@ -20,6 +20,7 @@ export interface Game {
 "tradeDate": null,
 "isAvailable": null,
 "users": null
+
 }
 
 */
