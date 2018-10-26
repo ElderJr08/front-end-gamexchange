@@ -11,21 +11,16 @@ export class LoginService {
     constructor(private http: HttpClient){}
 
     Logar(user,pass){
-
-        let payload = {
-            username: user,
-            password: pass
-        }
-
         let httpHeaders = new HttpHeaders()
         .set('Content-Type', 'application/json')
-        .set('Cache-Control', 'no-cache');
+        .set('Cache-Control', 'no-cache')
+        .set('Authorization', 'Basic ' + btoa(user+':'+pass));
 
         let options = {
             headers: httpHeaders
        }; 
 
-      return this.http.post(`${MY_API}/login`, payload, options).subscribe(function(res){
+      return this.http.post(`${MY_API}/login`, null, options).subscribe(function(res){
           console.log(res);
       })
     }
