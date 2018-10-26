@@ -17,6 +17,7 @@ export class LoginService {
         .set('Authorization', 'Basic ' + btoa(user+':'+pass));
 
         localStorage.setItem('token', 'Basic ' + btoa(user+':'+pass));
+        
 
         let options = {
             headers: httpHeaders
@@ -25,7 +26,11 @@ export class LoginService {
       return this.http.post(`${MY_API}/login`, null, options).subscribe(function(res){
           if(res === null){
               console.log('ok');
-              console.log(localStorage);
+              window.location.reload();
+              if(localStorage['token'] !== ''){
+                localStorage.setItem('logado', 'true');
+                console.log(localStorage);
+              }
           }
       })
     }

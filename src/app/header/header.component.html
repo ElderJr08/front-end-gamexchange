@@ -37,8 +37,9 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Verifica se tem usuario logado ou não-->
-          <ng-container *ngIf="[isLogged]; then notLogged; else Logged"></ng-container>
-          <ng-template #notLogged>
+           <!-- <ng-container *ngIf="['isLogged']; then Logged; else notLogged"></ng-container> -->
+           <ng-container *ngIf="isLogged; then Logged; else notLogged"></ng-container>
+           <ng-template #notLogged>
               <button type="button" class="btn btn-default btn-login" data-toggle="modal" data-target="#modal-login">
                Entrar
               </button>
