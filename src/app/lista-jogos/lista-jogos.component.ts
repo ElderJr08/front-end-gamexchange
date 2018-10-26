@@ -31,7 +31,13 @@ export class ListaJogosComponent implements OnInit {
       alert('Por favor, preencha o campo Descrição corretamente');
     }else{
       console.log(titulo,categ,desc);
-      /*this.gameService.Cadastrar(titulo,categ,desc);*/
+      this.gameService.Cadastrar(titulo,categ,desc)
+      .subscribe(res => {
+        console.log('ID: '+res['id']);
+        this.gameService.atribuirGame(res['id']);
+      })
+      
+      
     }
     
   }

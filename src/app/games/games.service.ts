@@ -37,10 +37,22 @@ export class GameService {
         name:titulo,
         description:desc,
         platform:"Ps4",
-        categoryId:4
-      }, options).subscribe(function(res){
-        console.log(res);
-      });
+        categoryId:categ
+      }, options);
+    }
+
+    atribuirGame(gameId){
+      let httpHeaders = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Cache-Control', 'no-cache')
+      .set('Authorization', localStorage['token']);
+    
+      let options = {
+        headers: httpHeaders      
+      }
+
+      this.http.post(`${MY_API}/user/game`, {gameId: gameId}, options)
+            .subscribe(res => console.log(res));
     }
     
 }
