@@ -8,6 +8,7 @@ import { RpgComponent } from './category/rpg/rpg.component';
 import { SportsComponent } from './category/sports/sports.component';
 import { OthersComponent } from './category/others/others.component';
 
+
 export const ROUTES: Routes =[
     {path:'', component: HomeComponent},
     {path:'lista-jogos', component: ListaJogosComponent},

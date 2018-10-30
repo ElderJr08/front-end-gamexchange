@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   }
 
   Logar(user, pass){
-    console.log("AQUIIIIIII");
     this.login.Logar(user, pass);
   }
 

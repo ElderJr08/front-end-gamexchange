@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { MY_API } from '../app.api';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 @Injectable()
 export class GameService {
-    constructor(private http: HttpClient){}
+    constructor(private http: HttpClient,
+                private router: Router){}
 
     games(){
       let httpHeaders = new HttpHeaders()
@@ -20,10 +23,11 @@ export class GameService {
 
     }
     getColumns(): string[]{//para as colunas
-      return ["name", "description", "platform", "isAvailable", "insertDate", "tradeDate"];
+      return ["name", "description", "platform"];//"isAvailable", "insertDate", "tradeDate"
     }
     
-    Cadastrar(titulo,categ,desc){
+    Cadastrar(titulo,categ,desc,plat){
+      
       let httpHeaders = new HttpHeaders()
         .set('Content-Type', 'application/json')
         .set('Cache-Control', 'no-cache')
@@ -36,12 +40,13 @@ export class GameService {
       return this.http.post(`${MY_API}/games`,{
         name:titulo,
         description:desc,
-        platform:"Ps4",
+        platform:plat,
         categoryId:categ
       }, options);
     }
 
     atribuirGame(gameId){
+      let router = this.router;
       let httpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Cache-Control', 'no-cache')
@@ -51,8 +56,11 @@ export class GameService {
         headers: httpHeaders      
       }
 
-      this.http.post(`${MY_API}/user/game`, {gameId: gameId}, options)
-            .subscribe(res => console.log(res));
+      return this.http.post(`${MY_API}/user/game`, {gameId: gameId}, options)
+            .subscribe(function(res){
+              console.log(res);             
+              router.navigate(['']);
+            });
     }
     
 }

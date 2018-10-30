@@ -32,6 +32,7 @@ import { LoginService } from './login/login.service';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+//import { FormsModule } from '@angular/forms';
 
 
 
@@ -57,10 +58,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent
   ],
   imports:[
- CommonModule,
-NgtUniversalModule,
- 
-    
+    CommonModule,
+    NgtUniversalModule,
+    /*FormsModule,*/
     HttpModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES),

@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./minhas-trocas.component.less']
 })
 export class MinhasTrocasComponent implements OnInit {
-
+  isUserLoggedIn:boolean;
   constructor() { }
 
   ngOnInit() {
+    this.isUserLoggedIn = JSON.parse(localStorage.getItem('logado'))
   }
 
 }
