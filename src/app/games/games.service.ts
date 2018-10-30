@@ -60,9 +60,11 @@ export class GameService {
             .subscribe(function(res){
               console.log(res);       
               if(res === null){
+              
+                document.getElementById("btn-modalOpen").click();
                 setTimeout(function(){
                   location.replace('')
-                },1000)
+               },1000)
               }else{
                 alert('Jogo não cadastrado!');
               }      

@@ -39,10 +39,8 @@ export class ListaJogosComponent implements OnInit {
         this.gameService.atribuirGame(res['id']);
         
       })
-      
-      
+           
     }
-    
   }
 
 }

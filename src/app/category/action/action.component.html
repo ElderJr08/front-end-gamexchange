@@ -35,7 +35,7 @@
                         <td *ngFor="let col of columns">
                             {{game[col]}}
                         </td>
-                        <ng-container *ngIf="[isAvailable]; then interested; else notinterested">
+                        <ng-container *ngIf="isUserLoggedIn; then interested; else notinterested">
                         </ng-container>
                         <ng-template #interested>
                           <td>Disponível</td>

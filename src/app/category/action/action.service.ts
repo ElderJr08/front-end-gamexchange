@@ -8,6 +8,9 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ActionService {
+
+  isUserLoggedIn: boolean;
+
     constructor(private http: Http){}
 
     action(): Observable<Category>{
