@@ -59,7 +59,7 @@ export class GameService {
       return this.http.post(`${MY_API}/user/game`, {gameId: gameId}, options)
             .subscribe(function(res){
               console.log(res);             
-              router.navigate(['']);
+              //router.navigate(['']);
             });
     }
     
