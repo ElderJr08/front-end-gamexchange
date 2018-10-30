@@ -24,7 +24,7 @@ export class HeaderComponent {
 }
 Exit(){
   localStorage.clear();
-  location.reload();
+  location.replace('');
 }
 // ngOnInit() {
   //   this.isUserLoggedIn = JSON.parse(localStorage.getItem('logado'));

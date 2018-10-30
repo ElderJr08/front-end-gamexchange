@@ -32,7 +32,7 @@ export class LoginService {
                     localStorage.setItem('logado', 'true');
                     localStorage.setItem('nickname', user.split('@')[0].toUpperCase());
                     console.log(localStorage);
-                    router.navigate(['']);
+                    router.navigate(['']);       
                     isUserLoggedIn.next(true);
                 }
             }

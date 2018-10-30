@@ -37,13 +37,6 @@ export class ListaJogosComponent implements OnInit {
       .subscribe(res => {
         console.log('ID: '+res['id']);
         this.gameService.atribuirGame(res['id']);
-        if(res['id'] !== null){
-          setTimeout(function(){
-            document.location.reload()
-          },1000)
-        }else{
-          alert('Jogo não cadastrado!');
-        }
         
       })
       

@@ -58,7 +58,14 @@ export class GameService {
 
       return this.http.post(`${MY_API}/user/game`, {gameId: gameId}, options)
             .subscribe(function(res){
-              console.log(res);             
+              console.log(res);       
+              if(res === null){
+                setTimeout(function(){
+                  location.replace('')
+                },1000)
+              }else{
+                alert('Jogo não cadastrado!');
+              }      
               //router.navigate(['']);
             });
     }
